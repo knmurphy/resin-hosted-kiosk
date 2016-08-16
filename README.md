@@ -4,7 +4,7 @@ Mostly based on https://github.com/shaunmulligan/resin-epiphany-kiosk
 Previously Based on http://blogs.wcode.org/2013/09/howto-boot-your-raspberry-pi-into-a-fullscreen-browser-kiosk/
 Loosely based on https://bitbucket.org/lifeeth/resin-kiosk.git
 
-##Installing 
+##Installing
 
 Create a [Resin.io](https://resin.io) application
 
@@ -22,10 +22,12 @@ git push resin
 
 ##Configuration
 
-The application looks for ENV variables to display. 
+The application looks for ENV variables to display.
 
 `DEFAULT_URL` - The url to display on all kiosks unless a machine
-specific url is set
+specific url is set. I haven't been able to succesfully change this remotely.
+
+adding an environment variable called URL to the device does get picked up remotely though. 
 
 `URL_<RESIN_DEVICE_UUID>` - Each resin device has a UUID. You can
 specify a machine specific url using this variable format
